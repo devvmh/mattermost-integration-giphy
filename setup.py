@@ -19,7 +19,7 @@ def version():
     if p.returncode != 0:
         print("unable to run git, leaving ecdsa/_version.py alone")
         return
-    return stdout[:-1]
+    return str(stdout[:-1])
 
 
 README = os.path.join(os.path.dirname(__file__), 'README.md')
